@@ -11,7 +11,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Dashboard /> },
-      { path: "user-settings", element: <UserSettings /> },
+      { path: "/user-settings", element: <UserSettings /> },
     ],
   },
 ]);

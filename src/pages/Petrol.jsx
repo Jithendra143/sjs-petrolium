@@ -289,7 +289,7 @@ export default function Petrol() {
               id="total_price"
               element="input"
               type="number"
-              label="Total Liters Sold X Today's Price"
+              label="Total Liters Sold x Today's Price"
               validators={[VALIDATOR_REQUIRE()]}
               errorText="Please check the Price"
               onInput={inputHandler}

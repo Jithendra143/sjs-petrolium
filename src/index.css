@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Reset default margins and padding */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body{
   font-family: "Poppins", serif;
-  background-color: #d9d9d9;
+  background: rgb(5,111,183);
+background: linear-gradient(90deg, rgba(5,111,183,1) 0%, rgba(142,209,230,1) 100%);
 }
 
 h1 {
@@ -32,59 +32,42 @@ small {
   font-size: 0.75rem;
 }
 
-/* Container styles */
-.container {
-  display: flex;
-  height: 100%;
-  gap: 0.5rem;
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
 }
 
-/* Sidebar styles */
-.sidebar {
-  width: 260px; /* You can adjust the width */
-  background-color: #f4f4f4;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  height: 100vh;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-.sidebar h1 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }
 
-/* Main content styles */
-main {
-  flex: 1; /* Makes the main content take up the remaining space */
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
-/* Header styles */
-header {
-  background-color: #333;
-  color: white;
-  padding: 15px;
-  padding-right: 20px;
+/* Firefox */
+scrollbar {
+  width: 12px;
+  height: 12px;
 }
 
-header h1 {
-  font-size: 1.5rem;
+scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-/* Main container styles */
-.main-container {
-  flex: 1;
-  padding: 15px;
-  background-color: #e0e0e0; /* Light background for the content area */
+scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
+scrollbar-thumb:hover {
+  background: #555;
 }

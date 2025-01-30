@@ -1,24 +1,20 @@
 import { MdOutlineDashboard, MdOutlineTimeline } from "react-icons/md";
-
+import { BsFuelPump, BsFuelPumpDiesel } from "react-icons/bs";
 import classes from "./Sidebar.module.css";
 import { FaUsersCog } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-const Sidebar = () => {
+export default function Sidebar() {
   return (
-    <div className={classes.navbar}>
+    <>
       <div className={classes.logo}>
         <a href="/">
-          <h1>SJS Petrolium</h1>
+          <h3>SJS Petrolium</h3>
         </a>
       </div>
       <nav>
         <ul>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => isActive && classes.active}
-              end
-            >
+            <NavLink to="/" end>
               <span>
                 <MdOutlineDashboard />
               </span>
@@ -26,15 +22,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="sales"
-              className={({ isActive }) =>
-                isActive || window.location.pathname.includes("sales")
-                  ? classes.active
-                  : ""
-              }
-              style={{ pointerEvents: 'none' }}
-            >
+            <NavLink to="sales" className={classes.active} style={{ pointerEvents: 'none' }}>
               <span>
                 <MdOutlineTimeline />
               </span>
@@ -43,21 +31,24 @@ const Sidebar = () => {
             <ul className={classes.submenu}>
               <li>
                 <NavLink to="sales/petrol">
+                  <span>
+                    <BsFuelPump />
+                  </span>
                   <h3>Petrol</h3>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="sales/disel">
+                  <span>
+                    <BsFuelPumpDiesel />
+                  </span>
                   <h3>Disel</h3>
                 </NavLink>
               </li>
             </ul>
           </li>
           <li>
-            <NavLink
-              to="user-settings"
-              className={({ isActive }) => isActive && classes.active}
-            >
+            <NavLink to="user-settings">
               <span>
                 <FaUsersCog />
               </span>
@@ -66,8 +57,6 @@ const Sidebar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </>
   );
-};
-
-export default Sidebar;
+}

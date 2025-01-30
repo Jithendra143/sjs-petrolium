@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+aside {
+  width: 260px;
+  height: 100vh;
+  background-color: #02b0d3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  margin: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(2, 177, 212, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+}
+
+.main-container {
+  background-color: rgba(2, 177, 212, 0.5);
+  height: 1000px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  aside {
+    display: flex;
+  }
+}
